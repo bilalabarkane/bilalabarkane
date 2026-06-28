@@ -1,6 +1,6 @@
 
 
-### *"La sécurité numérique commence par une confiance bien construite."*
+
 
 <br/>
 
@@ -27,13 +27,6 @@
 
 ---
 
-## 🖥️ Dashboard — capture en direct
-
-![Dashboard PKI Masterpiece](pics/dashboard.png)
-
-> *Tableau de bord temps réel — 8 certificats émis · 6 valides · 2 révoqués · Santé PKI 87% · Audit console live · avg_sign_ms = 19.4*
-
----
 
 
 ```mermaid
@@ -53,74 +46,6 @@ sequenceDiagram
     F-->>U: Signé en 22ms — serial 7C954AB3...
 ```
 
----
-
-## ✨ Galerie des fonctionnalités
-
-<table>
-<tr>
-<td width="50%" align="center">
-
-**📊 Tableau de bord temps réel**
-
-![Dashboard](pics/dashboard.png)
-
-*KPIs animés · Chart.js · Console audit LIVE · Statut PKI complet*
-
-</td>
-<td width="50%" align="center">
-
-**📋 Gestion des certificats**
-
-![Certificats](pics/certaficates.png)
-
-*8 certs · Filtres · Badges valid/revoked · Boutons révocation*
-
-</td>
-</tr>
-<tr>
-<td width="50%" align="center">
-
-**🔑 Génération de CSR**
-
-![CSR](pics/csr_gen.png)
-
-*RSA 2048/4096 ou ECDSA P-384 · SAN multiples · PEM affiché*
-
-</td>
-<td width="50%" align="center">
-
-**✍️ Signature de certificats**
-
-![Signer](pics/signer.png)
-
-*Upload CSR · Intermediate CA · 22ms · SHA-1 rejeté automatiquement*
-
-</td>
-</tr>
-<tr>
-<td width="50%" align="center">
-
-**✅ Vérification — Score 5/5**
-
-![Verifier](pics/verifier.png)
-
-*5 critères · 100% PARFAIT · Format · Dates · Chaîne · CRL · Algo*
-
-</td>
-<td width="50%" align="center">
-
-**🔮 Vue 3D — Three.js WebGL**
-
-![Vue 3D](pics/viz_3d.png)
-
-*Sphère Root · Octaèdre Inter · Cubes Leaf colorés · Navigation orbitale*
-
-</td>
-</tr>
-</table>
-
----
 
 ## 🚀 Installation en 4 étapes
 
