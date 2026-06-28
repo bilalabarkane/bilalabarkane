@@ -29,22 +29,6 @@
 
 
 
-```mermaid
-sequenceDiagram
-    participant U as Utilisateur
-    participant F as Flask App
-    participant B as Bash Scripts
-    participant O as OpenSSL
-    participant D as SQLite
-
-    U->>F: Upload CSR (.pem)
-    F->>B: sign_cert.sh <CN> server 365
-    B->>O: openssl ca -config inter.cnf -batch
-    O-->>B: Certificat signé (22ms)
-    B-->>F: cert_path + serial + ms
-    F->>D: INSERT INTO certificates
-    F-->>U: Signé en 22ms — serial 7C954AB3...
-```
 
 
 ## 🚀 Installation en 4 étapes
