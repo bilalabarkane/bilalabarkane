@@ -1,13 +1,4 @@
-<div align="center">
 
-```
-██████╗ ██╗  ██╗██╗    ███╗   ███╗ █████╗ ███████╗████████╗███████╗██████╗ ██████╗ ██╗███████╗ ██████╗███████╗
-██╔══██╗██║ ██╔╝██║    ████╗ ████║██╔══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗██╔══██╗██║██╔════╝██╔════╝██╔════╝
-██████╔╝█████╔╝ ██║    ██╔████╔██║███████║███████╗   ██║   █████╗  ██████╔╝██████╔╝██║█████╗  ██║     █████╗
-██╔═══╝ ██╔═██╗ ██║    ██║╚██╔╝██║██╔══██║╚════██║   ██║   ██╔══╝  ██╔══██╗██╔═══╝ ██║██╔══╝  ██║     ██╔══╝
-██║     ██║  ██╗██║    ██║ ╚═╝ ██║██║  ██║███████║   ██║   ███████╗██║  ██║██║     ██║███████╗╚██████╗███████╗
-╚═╝     ╚═╝  ╚═╝╚═╝    ╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝ ╚═════╝╚══════╝
-```
 
 ### *"La sécurité numérique commence par une confiance bien construite."*
 
@@ -44,37 +35,6 @@
 
 ---
 
-## 🏗️ Architecture PKI à Trois Niveaux
-
-```mermaid
-graph TD
-    ROOT["🔒 ROOT CA
-    RSA 4096 bits · SHA-256 · 20 ans
-    Auto-signée — AIR-GAPPED — HORS LIGNE"]
-    INTER["🏛️ INTERMEDIATE CA
-    RSA 4096 bits · SHA-256 · 10 ans
-    Signée par Root CA — EN LIGNE"]
-    LS["🌐 LEAF SERVER
-    RSA 2048 bits · serverAuth
-    SAN obligatoires · 365 jours"]
-    LE["🔐 LEAF ECDSA
-    ECDSA P-384 — 192 bits sécurité
-    Post-2030 · clientAuth · 365 jours"]
-    LC["📱 LEAF CLIENT
-    RSA 2048 / ECDSA
-    clientAuth · mTLS · Configurable"]
-
-    ROOT -->|"✦ signe — pathlen:1"| INTER
-    INTER -->|"✦ émet"| LS
-    INTER -->|"✦ émet"| LE
-    INTER -->|"✦ émet"| LC
-
-    style ROOT fill:#1a0f00,color:#F0B90B,stroke:#F0B90B,stroke-width:3px
-    style INTER fill:#001020,color:#4FACFE,stroke:#4FACFE,stroke-width:2px
-    style LS fill:#001a0f,color:#00D4AA,stroke:#00D4AA,stroke-width:1px
-    style LE fill:#0d001a,color:#A855F7,stroke:#A855F7,stroke-width:1px
-    style LC fill:#1a0800,color:#F97316,stroke:#F97316,stroke-width:1px
-```
 
 ```mermaid
 sequenceDiagram
